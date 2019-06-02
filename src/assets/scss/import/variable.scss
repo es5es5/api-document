@@ -1,0 +1,42 @@
+/* color */
+$dark: rgb(30,35,40);
+$gray-dark: rgb(85,90,95); // #555a5f
+// $gray: rgb(236,239,241);
+$gray: #c3c8cd;
+$gray-light: rgb(245,247,247);
+$gray-light-1: rgb(240,240,240); // #f0f0f0
+$gray-light-2: rgb(195,200,205); // #c3c8cd
+$gray-light-3:  rgb(220,220,220); // #dcdcdc / table border color,
+$gray-light-4: rgb(253,253,253); // #fdfdfd / table td color
+$gray-light-5: rgb(235,240,245); // table tfoot color
+
+$primary: rgb(0,210,49); // #00d232
+$red: rgb(240,60,60); // #f03c3c
+$red-light: rgb(216, 154, 154); // #e0b4b4
+$orange: rgb(255,160,0); // #ffa000
+$blue: rgb(66,133,244);
+
+@mixin gradient () {
+	background: rgb(255,255,255);
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(245,245,245,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f5f5f5',GradientType=0 );
+}
+
+/* fonts */
+@mixin font-family ($font-name) {
+	font-family: $font-name, Helvetica, Arial, sans-serif;
+}
+
+@mixin clearfix () {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin ellipsis () {
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
