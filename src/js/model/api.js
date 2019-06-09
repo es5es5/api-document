@@ -6,7 +6,7 @@ const API_MODEL =
         id : '',
         show: true,
         controllerName : "testController",
-        controllerMemo : "웅이가 만든 컨트롤러",
+        controllerMemo : "박보검이 만든 컨트롤러",
         api : [
           {
             api : {
@@ -69,8 +69,8 @@ const API_MODEL =
       controller : {
         id : '',
         show: false,
-        controllerName : "JongHyoController",
-        controllerMemo : "종효가 만든 컨트롤러",
+        controllerName : "JinController",
+        controllerMemo : "진이가 만든 컨트롤러",
         api : [
           {
             api : {
