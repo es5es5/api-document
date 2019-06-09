@@ -1,14 +1,23 @@
 <template>
   <div class="api_list">
+    <div class="project">
+      <div class="info">
+        <span class="projectName">
+          Make_it_API_Document_Web_UI_!!
+          <div class="ver">ver 1.0</div>
+        </span>
+        <span class="baseURL">base URL : <span class="txt_bold">http://lhw.api-document.com:4993</span></span>
+      </div>
+    </div>
     <div class="controller_container">
       <div class="controller_wrap">
-        <div class="controller" v-for="(controller, index) in API_MODEL.contents" :key="index" @click="controller.controller.show = !controller.controller.show">
+        <div class="controller" v-for="(controller, index) in apiModel.contents" :key="index">
           <div class="controller_inner">
             <span class="controllerName">{{ controller.controller.controllerName }}
               <span class="controllerMemo">{{ controller.controller.controllerMemo }}</span>
             </span>
           </div>
-          <div class="api_container" v-if="controller.controller.show">
+          <div class="api_container">
             <div class="api_wrap">
               <div class="api" :class="`api-${api.api.apiMethod}`" v-for="(api, index) in controller.controller.api" :key="index">
                 <div class="apiMethodIcon" :class="`api-${api.api.apiMethod}`">{{ api.api.apiMethod }}</div>
@@ -36,18 +45,19 @@ export default {
     this.getAPIModel()
   },
 	methods: {
+    toggleShow (show) {
+      console.log(this)
+      return !show
+    },
     getAPIModel() {
       console.log(this.API_MODEL)
       let TEMP = Object.assign({}, this.API_MODEL)
-      TEMP.contents.forEach((controller, index) => {
-        console.log(index)
-        controller.show = false
-      })
+      // TEMP.contents.forEach((controller, index) => {
+      //   console.log(index)
+      //   controller.show = false
+      // })
       Object.assign(this.apiModel, this.API_MODEL)
       console.log(this.apiModel)
-    },
-    toggleShow(show) {
-      
     }
   }
 }
@@ -56,6 +66,33 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/scss/import/variable.scss';
 
+.project {
+  .info {
+    border-radius: 15px;
+    padding: 35px;
+    background-color: $gray-light;
+    .projectName {
+      display: block;
+      font-weight: bold;
+      font-size: 40px;
+      color: $gray-dark;
+      position: relative;
+      .ver {
+        position: absolute;
+        bottom: 30px;
+        padding: 2px 4px;
+        font-size: 18px;
+        background-color: rgb(96, 175, 89);
+        border-radius: 9px;
+        display: inline-block;
+      }
+    }
+    .baseURL {
+      line-height: 2em;
+      font-size: 18px;
+    }
+  }
+}
 .controller_wrap {
   .controller {
     padding: 8px;
@@ -94,6 +131,9 @@ export default {
           &.api-DELETE {
             color: $api-DELETE;
           }
+          &.api-PATCH {
+            color: $api-PATCH;
+          }
           .apiURL {
             font-size: 18px;
             font-weight: bold;
@@ -126,6 +166,9 @@ export default {
           }
           &.api-DELETE {
             background-color: $api-DELETE;
+          }
+          &.api-PATCH {
+            background-color: $api-PATCH;
           }
         }
       }

@@ -20,6 +20,7 @@ $api-GET: rgb(0, 187, 255);
 $api-POST: rgb(12, 209, 91);
 $api-PUT: rgb(237, 177, 0);
 $api-DELETE: rgb(229, 98, 96);
+$api-PATCH: rgb(148, 0, 255);
 
 @mixin gradient () {
 	background: rgb(255,255,255);

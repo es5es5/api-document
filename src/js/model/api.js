@@ -52,6 +52,15 @@ const API_MODEL =
               apiMethod : "GET",
               url : "/api/testController/members/{memberId}"
             }
+          },
+          {
+            api : {
+              id : "5",
+              apiName : "member",
+              apiMemo : "멤버 수정하기",
+              apiMethod : "PATCH",
+              url : "/api/testController/members/{memberId}"
+            }
           }
         ]
       }
@@ -60,8 +69,8 @@ const API_MODEL =
       controller : {
         id : '',
         show: false,
-        controllerName : "testController",
-        controllerMemo : "웅이가 만든 컨트롤러",
+        controllerName : "JongHyoController",
+        controllerMemo : "종효가 만든 컨트롤러",
         api : [
           {
             api : {
