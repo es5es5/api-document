@@ -79,10 +79,12 @@ export default {
       position: relative;
       .ver {
         position: absolute;
-        bottom: 30px;
-        padding: 2px 4px;
+        bottom: 24px;
+        padding: 1px 10px 3px;
         font-size: 18px;
-        background-color: rgb(96, 175, 89);
+        margin-left: 8px;
+        color: $gray-light-1;
+        background-color: rgb(237, 154, 183);
         border-radius: 9px;
         display: inline-block;
       }
