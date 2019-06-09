@@ -16,6 +16,11 @@ $red-light: rgb(216, 154, 154); // #e0b4b4
 $orange: rgb(255,160,0); // #ffa000
 $blue: rgb(66,133,244);
 
+$api-GET: rgb(0, 187, 255);
+$api-POST: rgb(12, 209, 91);
+$api-PUT: rgb(237, 177, 0);
+$api-DELETE: rgb(229, 98, 96);
+
 @mixin gradient () {
 	background: rgb(255,255,255);
 	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(245,245,245,1) 100%);

@@ -1,0 +1,38 @@
+@charset 'utf-8';
+@import '@/assets/scss/import/variable.scss';
+
+// Common
+.clearfix::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.pull-left { float: left; }
+.pull-right { float: right; }
+.text-left { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.hidden_txt {
+	font-size: 0 !important;
+	// line-height: 0;
+	// text-indent: -9999px;
+	// overflow: hidden;
+}
+
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+// Text
+.txt_primary { color: $primary !important; }
+.txt_red { color: $red !important; }
+.txt_orange { color: $orange !important; }
+.txt_blue { color: $blue !important; }
+.txt_black { color: #000 !important; }
+.txt_bold { font-weight: bold; }
+
+// display
+.display_none { display: none; }
